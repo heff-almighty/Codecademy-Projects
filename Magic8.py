@@ -5,13 +5,13 @@ import random
 name = "Fred"
 
 #Variable: Participant question
-question = "Will I get a promotion this year?"
+question = "Will I get a promotion this year"
 
 #Answer variable
 answer = ""
 
 #Declaring a variable called random and assigning it function to select a random number within a set range of numbers
-random_number = random.randint(1, 9)
+random_number = random.randint(1, 13)
 
 #Print randomly generated number
 #print(random_number)
@@ -35,12 +35,26 @@ elif random_number == 8:
   answer = "Outlook not so good."
 elif random_number == 9:
   answer = "Very doubtful."
+elif random_number == 10:
+  answer = "Dont get your hopes up."
+elif random_number == 11:
+  answer = "Abso-fuckin-lutely!"
+elif random_number == 12:
+  answer = "The Gods have ordained it to be so!"
+elif random_number == 13:
+  answer = "No hope mate."
 else:
   answer = "Error"
 
 #print(answer)
 
 #User input sequence:
-print(name + " asks: " + question)
+if name == "":
+  print("Question: " + question)
+  
+if question == "":
+  print("Please ask a question.")
+else:
+  print(name + " asks: " + question)
+  print("Magic 8-Balls answer: " + answer)
 
-print("Magic 8-Balls answer: " + answer)
